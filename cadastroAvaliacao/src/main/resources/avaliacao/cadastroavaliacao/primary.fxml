@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="444.0" prefWidth="521.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avaliacao.cadastroavaliacao.PrimaryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Pane prefHeight="434.0" prefWidth="509.0">
+         <children>
+            <TableView fx:id="tabela" layoutX="9.0" layoutY="14.0" onMouseClicked="#selecionar" prefHeight="200.0" prefWidth="463.0">
+              <columns>
+                <TableColumn fx:id="columId" prefWidth="46.0" text="Id" />
+                <TableColumn fx:id="columNome" prefWidth="104.0" text="Nome" />
+                  <TableColumn fx:id="columEmail" prefWidth="98.0" text="E-mail" />
+                  <TableColumn fx:id="columTel" prefWidth="85.0" text="Telefone" />
+                  <TableColumn fx:id="columTipo" prefWidth="129.0" text="Tipo de Contato" />
+              </columns>
+            </TableView>
+            <Text layoutX="26.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="54.619140625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="26.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" wrappingWidth="67.619140625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="299.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail:" wrappingWidth="54.619140625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="299.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Contato:" wrappingWidth="103.619140625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtNome" layoutX="26.0" layoutY="249.0" prefHeight="25.0" prefWidth="141.0" />
+            <TextField fx:id="txtEmail" layoutX="299.0" layoutY="249.0" prefHeight="25.0" prefWidth="141.0" />
+            <TextField fx:id="txtTelefone" layoutX="26.0" layoutY="312.0" prefHeight="25.0" prefWidth="141.0" />
+            <ComboBox fx:id="cbTipo" layoutX="295.0" layoutY="312.0" prefWidth="150.0" />
+            <Button fx:id="btnDeletar" layoutX="202.0" layoutY="249.0" mnemonicParsing="false" onAction="#deletar" text="DELETAR" />
+            <Button fx:id="btnSalvar" layoutX="202.0" layoutY="312.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="63.0" text="SALVAR" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
